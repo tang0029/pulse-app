@@ -34,7 +34,8 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
 - Medication adherence is not tracked alongside blood pressure readings
 - Risk of health complications due to poor monitoring
 
-## 3. Goals, Core Metrics, Prioritisation & Roadmap
+
+## 3. Goals, Core Metrics & Prioritisation
 
 ### Primary goals
 - Enable consistent daily blood pressure tracking (AM/PM readings) with minimal cognitive load
@@ -53,10 +54,6 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
 | Healthcare provider sharing       | 0%                   | 70%+           | % of users who share reports with providers          |
 
 ### Prioritisation
-
-#### Risk Assessment per Component
-
-#### Overall Risk Summary
 
 #### Prioritised Stories (MVP Scope)
 1. **As an** elderly adult, **I want** to quickly log my daily AM and PM blood pressure readings (systolic, diastolic, pulse), **so that** I can track my health without getting overwhelmed by complex features.
@@ -91,19 +88,70 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
      - Date range selection
      - Clear, medical-grade formatting
 
-### Roadmap
 
+## 4. Solution Overview
 
-## 4. MVP Features
+### High Level Approach
+The solution is a web-based app designed with elderly users as the primary persona from the ground up. The app prioritises simplicity, accessibility, and family connectivity over feature complexity. It supports manual entry, ensuring broad accessibility regardless of device ownership.
 
-### User Flows
+### Key Features & Capabilities
 
-### Functional Requirements
+#### Feature 1: Elderly-First User Interface
+**Description**: Interface designed specifically for elderly users with large fonts (minimum 18pt), high contrast (WCAG AA compliance), simplified navigation (max 3 taps to any feature), clear visual hierarchy, and minimal cognitive load.
 
-### Agent Capabilities & System Behaviour
+**User value**: Reduces frustration, increases adoption, and enables independent use by elderly adults with varying tech proficiency.
 
+**Technical considerations**: 
+- Responsive design supporting tablet and phone
+- Dynamic font scaling respecting system settings
+- Colour-blind friendly palette
+- Touch targets minimum 44x44pt
 
-## 5. Constraints
+#### Feature 2: Daily Blood Pressure Tracking (AM/PM)
+**Description**: Simple, focused interface for logging systolic, diastolic, and pulse readings with AM/PM time indicators. Supports voice input and manual entry.
+
+**User value**: Matches real-world usage patterns (daily AM/PM readings) and reduces data entry errors.
+
+**Technical considerations**:
+- Voice-to-text integration for number input
+- Input validation (reasonable ranges: systolic 80-250, diastolic 40-150, pulse 40-120)
+- Quick entry mode for frequent users
+- Data persistence with cloud backup
+
+#### Feature 3: Family Dashboard
+**Description**: Separate family member interface (web app) providing real-time view of elderly user's blood pressure data, trend analysis, alert configuration, and communication tools.
+
+**User value**: Enables remote health monitoring by family members, addresses critical gap in market.
+
+**Technical considerations**:
+- Secure authentication and authorisation
+- Real-time data sync
+- Privacy controls (elderly user and family member can grant/revoke access)
+- Push notification system for alerts
+
+#### Feature 4: Trend Visualisation
+**Description**: Clear, large-format charts showing systolic, diastolic, and pulse trends over time with colour-coded zones indicating normal/elevated/high ranges.
+
+**User value**: Helps users understand their health patterns and identify concerning trends.
+
+**Technical considerations**:
+- Charting library (responsive, accessible)
+- Colour-coding based on AHA guidelines
+- Multiple time views (day, week, month, year)
+- Export capabilities
+
+#### Feature 5: Healthcare Provider Reports
+**Description**: One-tap report generation with professional formatting, charts, summary statistics, and multiple sharing options (email, PDF, print).
+
+**User value**: Facilitates communication with healthcare providers and improves care coordination.
+
+**Technical considerations**:
+- PDF generation library
+- Chart rendering for reports
+- Email integration
+- Date range selection and filtering
+
+## 5. Dependencies & Constraints
 
 
 ## 6. Technical Requirements
