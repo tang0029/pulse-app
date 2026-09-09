@@ -67,7 +67,7 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
      - Confirmation screen before saving
      - Success feedback after saving
 
-2. **As an** elderly adult, **I want** to see clear visual charts of my BP trends over time, **so that** I can understand if my readings are improving or concerning.
+2. **As an** elderly adult, **I want** to see clear visual charts of my blood pressure trends over time, **so that** I can understand if my readings are improving or concerning.
    - Acceptance criteria:
      - Large, high-contrast charts
      - Colour-coded zones (normal, elevated, high)
@@ -75,15 +75,15 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
      - Ability to view by day, week, month
      - Clear labels and legends
 
-3. **As a** family member, **I want** to view my elderly parent's BP data in real-time, **so that** I can monitor their health remotely and intervene if needed.
+3. **As a** family member, **I want** to view my elderly parent's blood pressure data in real-time, **so that** I can monitor their health remotely and intervene if needed.
    - Acceptance criteria:
-     - Separate caregiver dashboard/app access
-     - Real-time sync of BP readings
+     - Separate family member dashboard/app access
+     - Real-time sync of blood pressure readings
      - View trends and current readings
      - Alert notifications for concerning readings
      - Secure authentication and privacy controls
 
-4. **As an** elderly adult, **I want** to share my BP data with my doctor in a clear, professional format, **so that** they can make informed decisions about my treatment.
+4. **As an** elderly adult, **I want** to share my blood pressure data with my doctor/GP in a clear, professional format, **so that** they can make informed decisions about my treatment.
    - Acceptance criteria:
      - One-tap report generation
      - PDF export with charts and summary statistics
