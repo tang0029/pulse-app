@@ -54,12 +54,42 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
 
 ### Prioritisation
 
-
 #### Risk Assessment per Component
 
 #### Overall Risk Summary
 
 #### Prioritised Stories (MVP Scope)
+1. **As an** elderly adult, **I want** to quickly log my daily AM and PM blood pressure readings (systolic, diastolic, pulse), **so that** I can track my health without getting overwhelmed by complex features.
+   - Acceptance criteria:
+     - Large, easy-to-read input fields
+     - One-tap time selection (AM/PM)
+     - Voice input option for numbers
+     - Confirmation screen before saving
+     - Success feedback after saving
+
+2. **As an** elderly adult, **I want** to see clear visual charts of my BP trends over time, **so that** I can understand if my readings are improving or concerning.
+   - Acceptance criteria:
+     - Large, high-contrast charts
+     - Colour-coded zones (normal, elevated, high)
+     - Simple line graphs showing systolic, diastolic, and pulse trends
+     - Ability to view by day, week, month
+     - Clear labels and legends
+
+3. **As a** family member, **I want** to view my elderly parent's BP data in real-time, **so that** I can monitor their health remotely and intervene if needed.
+   - Acceptance criteria:
+     - Separate caregiver dashboard/app access
+     - Real-time sync of BP readings
+     - View trends and current readings
+     - Alert notifications for concerning readings
+     - Secure authentication and privacy controls
+
+4. **As an** elderly adult, **I want** to share my BP data with my doctor in a clear, professional format, **so that** they can make informed decisions about my treatment.
+   - Acceptance criteria:
+     - One-tap report generation
+     - PDF export with charts and summary statistics
+     - Email sharing capability
+     - Date range selection
+     - Clear, medical-grade formatting
 
 ### Roadmap
 
