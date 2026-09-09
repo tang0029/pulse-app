@@ -21,13 +21,39 @@ Current blood pressure tracking apps are either too complex for elderly users or
 ### Who are you solving this problem for?
 Primary users are elderly adults (65+) managing hypertension, with secondary users being family members who need to monitor their loved one's health data.
 
-## 3. Core Metrics, Prioritisation & Roadmap
+### Current state
+- Users track blood pressure manually in notes/spreadsheets (as evidenced by the data file)
+- Existing apps are either too complex or lack critical features (family sharing, medication reminders)
+- Device-specific apps require hardware purchases
+- Frequent upgrade prompts and unclear free/premium differentiation create frustration
+
+### Impact
+- Inconsistent tracking leads to incomplete health data
+- Family members cannot easily monitor elderly relatives' health
+- Healthcare providers receive incomplete or poorly formatted data
+- Medication adherence is not tracked alongside blood pressure readings
+- Risk of health complications due to poor monitoring
+
+## 3. Goals, Core Metrics, Prioritisation & Roadmap
+
+### Primary goals
+- Enable consistent daily blood pressure tracking (AM/PM readings) with minimal cognitive load
+- Provide family members with real-time access to health data and alerts
+- Generate clear, shareable reports for healthcare providers
+- Support medication tracking and reminders to improve adherence
 
 ### How will you know the problem is solved? (Core Metrics)
+| Metric                            | Baseline             | Target         | Measurement Method                                   |
+| --------------------------------- | -------------------- | -------------- | ---------------------------------------------------- |
+| Daily active usage rate           | 0% (manual tracking) | 90%+           | % of days with at least one reading logged           |
+| User satisfaction (elderly users) | N/A                  | 4.5/5          | In-app survey after 4 weeks of use                   |
+| Family/caregiver adoption         | 0%                   | 80%+           | % of users with at least one family member connected |
+| Medication reminder adherence     | N/A                  | 85%+           | % of medication reminders acknowledged               |
+| Data accuracy                     | Manual entry errors  | <2% error rate | Validation against device readings                   |
+| Healthcare provider sharing       | 0%                   | 70%+           | % of users who share reports with providers          |
 
 ### Prioritisation
 
-#### Breaking the Agentic Workflow into Components
 
 #### Risk Assessment per Component
 
