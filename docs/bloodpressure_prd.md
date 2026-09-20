@@ -41,7 +41,6 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
 - Enable consistent daily blood pressure tracking (AM/PM readings) with minimal cognitive load
 - Provide family members with real-time access to health data and alerts
 - Generate clear, shareable reports for healthcare providers
-- Support medication tracking and reminders to improve adherence
 
 ### How will you know the problem is solved? (Core Metrics)
 | Metric                            | Baseline             | Target         | Measurement Method                                   |
