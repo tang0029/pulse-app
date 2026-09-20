@@ -13,7 +13,7 @@ Its job is to make daily logging easy for two elderly parents, and to make sure 
 | [`docs/PULSE_BUILD_SPEC.md`](docs/PULSE_SPEC.md)       | Build spec — scope, build order, analytics, security, NFRs, tests, acceptance criteria |
 | [`docs/PULSE_RUNBOOK.md`](docs/PULSE_RUNBOOK.md) | Deploying, post-deploy checks, troubleshooting                                         |
 
-**Start here if you're building:** `docs/SPEC.md` §3.3 (build order), then the LLD.
+**Start here if you're building:** `docs/PULSE_BUILD_SPEC.md` §3.3 (build order), then the LLD.
 
 ## Stack
 
