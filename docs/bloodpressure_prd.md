@@ -151,21 +151,91 @@ The solution is a web-based app designed with elderly users as the primary perso
 - Email integration
 - Date range selection and filtering
 
-## 5. Dependencies & Constraints
+
+## 5. Dependencies, Constraints & Assumptions
+
+### Dependencies
+#### Internal
+  - Design system and UI components
+  - Backend infrastructure setup
+  - CI/CD pipeline for cloud-based deployments
+
+#### External
+  - Compliance for GDPR and New Zealand Privacy Act 2020
+  - Accessibility testing with elderly users
+
+### Constraints
+#### Regulatory
+  - Medical device regulations (not a medical device, but health data)
+  - Privacy regulations (GDPR, New Zealand Privacy Act 2020)
+
+### Assumptions
+- Internet connectivity available for initial setup and sync 
+- Users are comfortable with basic app navigation after onboarding
+- Family members have computers/tablets for dashboard access
 
 
 ## 6. Technical Requirements
 
-### Architecture Overview
+### Architecture Considerations
+**Platform**: Web app for optimal performance and accessibility
+- **Frontend:** Cloud-based modern UI components, e.g. React, TypeScript
+- **Backend**: Cloud-based for data sync and family sharing
+- **Database**: Secure, encrypted storage with GDPR and New Zealand Privacy Act 2020 considerations, e.g. Supabase Postgres database
+- **API**: RESTful APIs 
+- **Hosting:** Cloud-based and AI-based hosting platform, e.g. Netlify
 
-#### Front End
+### Data Requirements
+#### Data Sources
+  - User-entered BP readings (systolic, diastolic, pulse, timestamp, AM/PM)
+  - Medication data (name, dosage, frequency, reminder times)
+  - User notes and tags
+  - Family members and permissions
 
+#### Data Storage
+  - Encrypted at rest and in transit
+  - Cloud database for sync and sharing
+  - Backup and recovery procedures
 
+#### Data Accuracy
+  - Input validation (range checks)
+  - Device reading validation
+  - Timestamp accuracy (timezone handling)
+  - Data integrity checks
 
+### Performance Requirements
+- Web load time: <2 seconds on desktops, tablets and mobile devices
+- Reading entry: <1 second to save
+- Chart rendering: <1 second for 30 days of data
+- Sync: Automatic background sync
 
+### Security & Compliance
+**Authentication**: Secure login with email address
+- **Data encryption**: End-to-end encryption for sensitive health data
+- **Privacy**: 
+  - User controls over data sharing
+  - Clear privacy policy
+  - GDPR and New Zealand Privacy Act 2020 considerations 
+  - No data sharing with third parties without explicit consent
+- **Access controls**: Role-based access (elderly users, family members)
+- **Audit logging**: Track data access and modifications
 
-## 11. Production Readiness Criteria & Metrics (HHH)
+## 7. Risks & Mitigation
 
+### High Risk
+**Risk**: Elderly users find app too complex despite design efforts
+  - **Impact**: Low adoption, user frustration, product failure
+  - **Probability**: Medium
+  - **Mitigation**: Extensive user testing with elderly users throughout design and development, iterative improvements based on feedback, simplified onboarding flow
 
-### Launch Criteria
+- **Risk**: Privacy/regulatory compliance issues (GDPR, New Zealand Privacy Act 2020)
+  - **Impact**: Legal issues, user trust concerns
+  - **Probability**: Medium
+  - **Mitigation**: Privacy-by-design approach, clear privacy policy, user consent flows
+
+## 8. Production Readiness Criteria & Metrics
+
+### Prod Readiness Criteria
+
+### Metrics
 
