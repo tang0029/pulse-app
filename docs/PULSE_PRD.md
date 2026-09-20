@@ -230,6 +230,3 @@ The solution is a web-based app designed with elderly users as the primary perso
 ## 8. Production Readiness Criteria & Metrics
 
 ### Prod Readiness Criteria
-
-### Metrics
-
