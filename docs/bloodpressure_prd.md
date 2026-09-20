@@ -184,7 +184,6 @@ The solution is a web-based app designed with elderly users as the primary perso
 ### Data Requirements
 #### Data Sources
   - User-entered BP readings (systolic, diastolic, pulse, timestamp, AM/PM)
-  - Medication data (name, dosage, frequency, reminder times)
   - User notes and tags
   - Family members and permissions
 
