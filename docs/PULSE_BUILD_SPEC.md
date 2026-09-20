@@ -135,7 +135,7 @@ No dashboards beyond this. If you want a number that isn't here, add it delibera
 
 ## 6. Low-level design
 
-> The low-level design now lives in its own file for the GitHub repo: [`PULSE_LLD.md`](./PULSE_LLD.md).
+> **Moved.** The low-level design now lives in its own file for the GitHub repo: [`PULSE_LLD.md`](./PULSE_LLD.md).
 >
 > It covers: schema · RLS policies · profile provisioning · audit log · timezone handling · the alert rule and its test table · alert trigger and dedupe · re-logging the same slot · Edge Functions · frontend module map · session persistence · accessibility.
 >
