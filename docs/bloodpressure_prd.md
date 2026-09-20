@@ -47,11 +47,9 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
 | Metric                            | Baseline             | Target         | Measurement Method                                   |
 | --------------------------------- | -------------------- | -------------- | ---------------------------------------------------- |
 | Daily active usage rate           | 0% (manual tracking) | 90%+           | % of days with at least one reading logged           |
-| User satisfaction (elderly users) | N/A                  | 4.5/5          | In-app survey after 4 weeks of use                   |
-| Family/caregiver adoption         | 0%                   | 80%+           | % of users with at least one family member connected |
-| Medication reminder adherence     | N/A                  | 85%+           | % of medication reminders acknowledged               |
-| Data accuracy                     | Manual entry errors  | <2% error rate | Validation against device readings                   |
-| Healthcare provider sharing       | 0%                   | 70%+           | % of users who share reports with providers          |
+| Family/caregiver adoption         | 0%                   | 100%           | Check on Day 1  |
+| Medication reminder adherence     | N/A                  | 85%+           | % of medication reminders acknowledged (Day 2)               |
+| Healthcare provider sharing       | 0%                   | 100%          | Either the GP visit happens or not      |
 
 ### Prioritisation
 
