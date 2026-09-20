@@ -234,4 +234,5 @@ The solution is a web-based app designed with elderly users as the primary perso
 - Can see data trends
 - Can generate and download data
 - Alert email lands in the inbox, not spam
+- Stored data is secure
 - Backups confirmed restorable at least once 
