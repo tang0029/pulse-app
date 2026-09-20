@@ -2,7 +2,7 @@
 
 Implementation-level design for **Pulse**, a blood pressure tracking web app for a single family: two patients in New Zealand, two family viewers (one in the UK, one in NZ).
 
-- **What and why:** [`bloodpressure_prd.md`](./bloodpressure_prd.md)
+- **What and why:** [`PULSE_PRD.md`](./PULSE_PRD.md)
 - **Analytics, high-level design, security, test plan, deploy runbook:** the build spec (`SPEC.md`)
 - **This document:** schema, authorisation, the alert rule, triggers, functions, frontend structure
 
