@@ -1,5 +1,5 @@
 # Pulse-App
-A blood pressure web app for elderly adults
+A blood pressure web app for elderly adults.
 
 Its job is to make daily logging easy for two elderly parents, and to make sure a reading above the GP's threshold reaches family the same day — by email, without anyone having to open the app.
 
