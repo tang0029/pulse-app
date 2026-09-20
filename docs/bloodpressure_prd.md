@@ -48,7 +48,6 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
 | --------------------------------- | -------------------- | -------------- | ---------------------------------------------------- |
 | Daily active usage rate           | 0% (manual tracking) | 90%+           | % of days with at least one reading logged           |
 | Family/caregiver adoption         | 0%                   | 100%           | Check on Day 1  |
-| Medication reminder adherence     | N/A                  | 85%+           | % of medication reminders acknowledged (Day 2)               |
 | Healthcare provider sharing       | 0%                   | 100%          | Either the GP visit happens or not      |
 
 ### Prioritisation
@@ -206,7 +205,7 @@ The solution is a web-based app designed with elderly users as the primary perso
 
 ### Security & Compliance
 **Authentication**: Secure login with email address
-- **Data encryption**: End-to-end encryption for sensitive health data
+- **Data encryption**: Encrypted in transit and at rest, plus row-level authorisation
 - **Privacy**: 
   - User controls over data sharing
   - Clear privacy policy
