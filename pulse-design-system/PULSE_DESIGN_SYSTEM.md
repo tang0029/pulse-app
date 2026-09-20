@@ -4,21 +4,48 @@ A calm, clinical, **accessibility-first** design system for a web-based blood pr
 
 > "Let's check in, Dad." — the tone we're after.
 
+> **Status — revised 20 Sep 2026.** Scope, thresholds and storage were rewritten to match the current PRD and build spec (`BP Web App/docs/PULSE_PRD.md`, `PULSE_SPEC.md`, `PULSE_LLD.md`). The visual foundations, voice and component anatomy below are unchanged and remain the reference. Where this document and the build spec disagree, **the build spec wins** — tell me and I'll fix it here.
+
 ## Product context
 
-**Pulse** is a browser-based blood pressure app.
+**Pulse** is a blood pressure web app for one family: two parents in New Zealand who log their own readings, and two family members (one in the UK, one in NZ) who can view them and are emailed when a reading is high.
 
-1. **Home** — shows the most recent reading prominently, plus a line chart of systolic/diastolic trends over 7d / 30d / all. One glance answers "am I okay?"
-2. **Log a reading** — a giant, forgiving number input. Date, time slot (AM/PM), systolic, diastolic, pulse. ≤ 3 clicks to save.
-3. **Export** — CSV download of all readings.
+### Screens
 
-Colour-coded status per reading: **normal** (healthy green), **elevated** (caution amber), **high** — systolic ≥ 160 is clearly flagged in alert red.
+| # | Screen | State |
+|---|---|---|
+| 1 | **Home** (patient) — most recent reading, prominent, colour-coded. One glance answers "am I okay?" | Designed |
+| 2 | **Log a reading** — a giant, forgiving number input. Date, time slot (AM/PM), systolic, diastolic, pulse. ≤ 3 clicks to save | Designed |
+| 3 | **Trends** — line chart of systolic / diastolic / pulse over 7d / 30d / all | Designed |
+| 4 | **Sign in** — one email field, one button. Magic link, no password | ⚠️ Undesigned |
+| 5 | **Family dashboard** — both parents, latest reading and status each | ⚠️ Undesigned |
+| 6 | **Patient detail** (family view) — one parent's chart and history | ⚠️ Undesigned |
+| 7 | **Sharing** (patient) — who can see my readings; revoke access; alerts on/off | ⚠️ Undesigned |
+| 8 | **Alert email** — the message sent when a reading is high | ⚠️ Undesigned |
+| 9 | **GP report** — date range → PDF with chart and summary stats | ⚠️ Undesigned |
+| 10 | **Health / delivery status** (family) — days logged, last alert, delivery failures | ⚠️ Undesigned |
 
-Out of scope for v1: mobile apps, caregiver sharing, device integration, medication reminders.
+Screens 4–10 are why this document can't yet be built from end to end. Screen 8 is the most important one in the product and currently has no design at all.
+
+### Status bands
+
+Colour-coded per reading. **Systolic only** — the GP has advised that diastolic is not a clinical concern for these patients, so diastolic is displayed prominently but never drives colour or an alert.
+
+| Band | Condition | Colour |
+|---|---|---|
+| Normal | systolic ≤ 130 | healthy green |
+| Elevated | systolic 131–150 | caution amber |
+| **High** | **systolic > 150** | alert red |
+
+Evaluated high → elevated → normal; first match wins.
+
+**Red on screen and an email being sent are the same condition.** They must never disagree — a reading shown in red with no alert, or an alert for something shown in amber, destroys trust in both signals.
+
+Out of scope for v1: mobile apps, device integration, medication reminders, voice input.
 
 This system is a **personal project** — there is no existing codebase, Figma file, or prior brand. The design direction was chosen fresh based on:
 
-- **Audience:** Elderly parents. 26px body minimum. 120px+ for the reading itself. Touch targets ≥ 64px.
+- **Audience:** Elderly parents. 26px body minimum. 120px+ for the reading itself. Touch targets ≥ 64px. (The PRD states its floors in points — 18pt body, 44×44pt targets, i.e. ~24px and ~59px. These numbers are stricter, and they are the ones to build to. **Use px throughout; the pt figures are the PRD's floor, not a second standard.**)
 - **Aesthetic:** Calm clinical — soft blues/greens, clean sans, generous whitespace, medical-grade trust.
 - **Tone:** Warm and familial — first-name, second-person, reassuring.
 - **Variation:** Two contrasting directions explored (see below).
@@ -41,28 +68,23 @@ No external design system was provided. Influences (not copied, not referenced a
 
 ## Index
 
-Everything lives at the project root unless noted:
+> ⚠️ **The files listed below are missing.** They are not in the vault, and the repo's `pulse-design-system/` contains only this document. The tokens, logo, icons and UI kit described here have to be rebuilt or located before anything can consume them. Until then, this document is a written specification, not a usable kit.
 
-- **Design.md** — this file. Product context, content fundamentals, visual foundations, iconography.
-- **colors_and_type.css** — CSS custom properties for both directions (A: Clinic, B: Garden) + semantic type classes.
-- **SKILL.md** — cross-compatible skill file so this can be used as an Agent Skill.
-- **assets/logo/** — Pulse wordmark + mark (SVG, uses currentColor).
-- **assets/icons/** — 15 curated Lucide SVGs (1.5px stroke).
-- **preview/** — design-system cards (type specimens, palettes, components, etc). Rendered in the Design System tab.
-- **ui_kits/web_app/** — the main Pulse web app UI kit (home + log-reading click-through with localStorage + CSV export + seeded Dec 2025–Mar 2026 data).
+- **This file** — product context, content fundamentals, visual foundations, iconography.
+- **colors_and_type.css** — CSS custom properties for both directions (A: Clinic, B: Garden) + semantic type classes. *Missing.*
+- **assets/logo/** — Pulse wordmark + mark (SVG, uses currentColor). *Missing.*
+- **assets/icons/** — 15 curated Lucide SVGs (1.5px stroke). *Missing — and Lucide can be loaded from its own package instead.*
+- **preview/** — design-system cards (type specimens, palettes, components). *Missing.*
 
-### Preview cards
+### Superseded prototype
 
-Type, Colors, Spacing, Components, Brand — split into small single-purpose cards visible in the Design System tab.
+An earlier UI kit (`ui_kits/web_app/`) demonstrated a home + log-reading click-through backed by **localStorage**, with CSV export and seeded Dec 2025–Mar 2026 data. It is **superseded** and should not be built on:
 
-### UI kit — web app
+- The app now uses Supabase Postgres with per-user authentication; browser-local storage can't support two patients, two viewers or alerting.
+- Production starts **empty** — no seeded historical readings.
+- CSV export is not in the current MVP; the export requirement is a **PDF for the GP**.
 
-- index.html — entry
-- data.js — seed data + classify/format helpers
-- Components.jsx — Icon, TopBar, Button, StatusPill
-- HomeComponents.jsx — ReadingCard, RangeTabs, TrendChart, ReadingList
-- LogForm.jsx — NumberField, SlotToggle, LogForm
-- App.jsx — wiring, view routing, direction toggle
+Its component anatomy is still a good reference for structure: `ReadingCard`, `RangeTabs`, `TrendChart`, `ReadingList`, `NumberField`, `SlotToggle`, `StatusPill`, `TopBar`, `Button`, `Icon`.
 
 ## Content fundamentals
 
@@ -102,6 +124,25 @@ Type, Colors, Spacing, Components, Brand — split into small single-purpose car
 |Out of range (low)|"A little low today. Sit for a moment before standing."|
 |Empty state|"No readings yet. Let's add the first one."|
 |Streak|"That's 7 days in a row. ❤️"|
+
+### Copy still to write
+
+Drafts for the undesigned screens, in voice — treat as starting points, not decisions:
+
+|Context|Draft copy|
+|---|---|
+|Sign-in prompt|"Pop in your email and we'll send you a link."|
+|Sign-in sent|"Check your email — the link's on its way."|
+|Replace an existing reading|"You already logged a morning reading today — 142 / 88. Replace it?"|
+|Save failed|"That didn't save. Your numbers are still here — try again?"|
+|Family dashboard, all well|"Both looking steady."|
+|Family dashboard, high reading|"Dad's morning reading was high."|
+|Alert email subject|"Pulse: Dad's reading is 168 / 95 (Tue 8:05am NZDT)"|
+|Sharing screen|"People who can see your readings"|
+|Revoke confirmation|"Stop sharing with Sarah? She won't see new readings or get alerts."|
+|Alert delivery failed|"We couldn't deliver the last alert email. Check the address?"|
+
+**Two voice rules for the family-facing screens.** The warm, first-name voice is for the *parent*. Alerts and the dashboard are read by an adult child who may be at work and needs the facts fast — plain, calm, specific, no emoji, no reassurance the data doesn't support. Never soften a high reading in an alert.
 
 ## Visual foundations
 
