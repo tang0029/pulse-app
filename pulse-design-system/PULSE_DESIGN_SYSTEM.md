@@ -4,7 +4,7 @@ A calm, clinical, **accessibility-first** design system for a web-based blood pr
 
 > "Let's check in, Dad." — the tone we're after.
 
-> **Status — revised 20 Sep 2026.** Scope, thresholds and storage were rewritten to match the current PRD and build spec (`BP Web App/docs/PULSE_PRD.md`, `PULSE_SPEC.md`, `PULSE_LLD.md`). The visual foundations, voice and component anatomy below are unchanged and remain the reference. Where this document and the build spec disagree, **the build spec wins** — tell me and I'll fix it here.
+> **Status — revised 20 Sep 2026.** Scope, thresholds and storage were rewritten to match the current PRD and build spec (`BP Web App/docs/PULSE_PRD.md`, `PULSE_BUILD_SPEC.md`, `PULSE_LLD.md`). The visual foundations, voice and component anatomy below are unchanged and remain the reference. Where this document and the build spec disagree, **the build spec wins** — tell me and I'll fix it here.
 
 ## Product context
 
