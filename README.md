@@ -5,13 +5,13 @@ Its job is to make daily logging easy for two elderly parents, and to make sure 
 
 ## Documentation
 
-| Document | What's in it |
-|---|---|
-| [`docs/bloodpressure_prd.md`](docs/bloodpressure_prd.md) | What and why — problem, users, goals, stories |
-| [`docs/bloodpressure_hld.md`](docs/bloodpressure_hld.md) | Architecture — context, stack, alert flow |
-| [`docs/bloodpressure_lld.md`](docs/bloodpressure_lld.md) | Schema, RLS policies, triggers, Edge Functions, module map |
-| [`docs/SPEC.md`](docs/SPEC.md) | Build spec — scope, build order, analytics, security, NFRs, tests, acceptance criteria |
-| [`docs/RUNBOOK.md`](docs/RUNBOOK.md) | Deploying, post-deploy checks, troubleshooting |
+| Document                                         | What's in it                                                                           |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| [`docs/PULSE_PRD.md`](docs/PULSE_PRD.md)         | What and why — problem, users, goals, stories                                          |
+| [`docs/PULSE_HLD.md`](docs/PULSE_HLD.md)         | Architecture — context, stack, alert flow                                              |
+| [`docs/PULSE_LLD.md`](docs/PULSE_LLD.md)         | Schema, RLS policies, triggers, Edge Functions, module map                             |
+| [`docs/PULSE_SPEC.md`](docs/PULSE_SPEC.md)       | Build spec — scope, build order, analytics, security, NFRs, tests, acceptance criteria |
+| [`docs/PULSE_RUNBOOK.md`](docs/PULSE_RUNBOOK.md) | Deploying, post-deploy checks, troubleshooting                                         |
 
 **Start here if you're building:** `docs/SPEC.md` §3.3 (build order), then the LLD.
 
