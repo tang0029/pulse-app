@@ -2,8 +2,8 @@
 
 Architecture for **Pulse**, a blood pressure tracking web app for one family: two patients in New Zealand, two family viewers (one in the UK, one in NZ).
 
-- **What and why:** [`bloodpressure_prd.md`](./bloodpressure_prd.md)
-- **Schema, policies, triggers, functions:** [`bloodpressure_lld.md`](./bloodpressure_lld.md)
+- **What and why:** [`PULSE_PRD.md`](./PULSE_PRD.md)
+- **Schema, policies, triggers, functions:** [`PULSE_LLD.md`](./PULSE_LLD.md)
 - **Scope, analytics, security, tests, acceptance criteria:** `SPEC.md`
 - **Deploying it:** [`RUNBOOK.md`](./RUNBOOK.md)
 
@@ -25,7 +25,7 @@ Two invariants the architecture must hold:
 ```
    NZ                                                UK
 ┌──────────────┐  ┌──────────────┐          ┌──────────────┐
-│  Dad         │  │  Mum         │          │  Tiara       │
+│  Dad         │  │  Mum         │          │  Me       │
 │  (patient)   │  │  (patient)   │          │  (family)    │
 └──────┬───────┘  └──────┬───────┘          └──────┬───────┘
        │ logs            │ logs                    │ views + receives alerts
