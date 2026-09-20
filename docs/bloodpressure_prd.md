@@ -204,9 +204,10 @@ The solution is a web-based app designed with elderly users as the primary perso
 - Sync: Automatic background sync
 
 ### Security & Compliance
-**Authentication**: Secure login with email address
+**Authentication**: Only authenticated and registered users can access the web app
 - **Data encryption**: Encrypted in transit and at rest, plus row-level authorisation
 - **Privacy**: 
+  - Only specified users can register on the web app
   - User controls over data sharing
   - Clear privacy policy
   - GDPR and New Zealand Privacy Act 2020 considerations 
