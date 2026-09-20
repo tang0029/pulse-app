@@ -158,32 +158,14 @@ The solution is a web-based app designed with elderly users as the primary perso
 
 ### Architecture Overview
 
-### Model Requirements
-
-### Model Selection & Cost Trade-offs
+#### Front End
 
 
-## 7. Grounding Strategy
 
-
-## 8. Prompt Strategy
-
-
-## 9. Hallucination Guardrails
-
-
-## 10. Evaluation Strategy
-
-### Ground truth sources
-
-### Evaluation Plan
-
-### AI Performance Monitoring (Post-Launch)
 
 
 ## 11. Production Readiness Criteria & Metrics (HHH)
 
-### HHH Evaluation
 
 ### Launch Criteria
 
