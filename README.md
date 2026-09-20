@@ -48,4 +48,4 @@ npm test          # unit
 npm run test:e2e  # end-to-end, against the local Supabase stack
 ```
 
-The test plan is in `docs/SPEC.md` §9.3. **T1 — "one patient's session cannot read the other patient's readings" — is the gate.** Don't build UI until it passes.
+The test plan is in `docs/PULSE_BUILD_SPEC.md` §9.3. **T1 — "one patient's session cannot read the other patient's readings" — is the gate.** Don't build UI until it passes.
