@@ -58,7 +58,6 @@ Primary users are elderly adults (65+) managing hypertension, with secondary use
    - Acceptance criteria:
      - Large, easy-to-read input fields
      - One-tap time selection (AM/PM)
-     - Voice input option for numbers
      - Confirmation screen before saving
      - Success feedback after saving
 
@@ -111,7 +110,6 @@ The solution is a web-based app designed with elderly users as the primary perso
 **User value**: Matches real-world usage patterns (daily AM/PM readings) and reduces data entry errors.
 
 **Technical considerations**:
-- Voice-to-text integration for number input
 - Input validation (reasonable ranges: systolic 80-250, diastolic 40-150, pulse 40-120)
 - Quick entry mode for frequent users
 - Data persistence with cloud backup
