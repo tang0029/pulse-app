@@ -4,7 +4,7 @@ Architecture for **Pulse**, a blood pressure tracking web app for one family: tw
 
 - **What and why:** [`PULSE_PRD.md`](./PULSE_PRD.md)
 - **Schema, policies, triggers, functions:** [`PULSE_LLD.md`](./PULSE_LLD.md)
-- **Scope, analytics, security, tests, acceptance criteria:** `SPEC.md`
+- **Scope, analytics, security, tests, acceptance criteria:** `PULSE_BUILD_SPEC.md`
 - **Deploying it:** [`PULSE_DEPLOYMENT_RUNBOOK.md`](./PULSE_DEPLOYMENT_RUNBOOK.md)
 
 ## The requirement that shapes the architecture
