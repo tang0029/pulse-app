@@ -57,7 +57,7 @@ Sequencing, not scope reduction. Everything in §3.1 still ships.
 | **S4** | **Alert path**: rule evaluation → queued delivery → email sent → delivery status recorded | The safety case. Highest risk, so earliest |
 | **S5** | Trend chart + family dashboard | Read-side |
 | **S6** | GP report PDF | Depends on S1–S5; genuinely additive work |
-| **S7** | Deploy to cloud, smoke test, handover to parents | [RUNBOOK](./PULSE_RUNBOOK.md) |
+| **S7** | Deploy to cloud, smoke test, handover to parents | [RUNBOOK](./PULSE_DEPLOYMENT_RUNBOOK.md) |
 
 ## 4. Product analytics
 
@@ -223,7 +223,7 @@ Being defended against, in priority order:
 
 ### 9.4 Local → cloud
 
-> **Moved.** See [`PULSE_RUNBOOK.md`](./PULSE_RUNBOOK.md) — first deploy, post-deploy checks, alert troubleshooting and rollback.
+> **Moved.** See [`PULSE_DEPLOYMENT_RUNBOOK.md`](./PULSE_DEPLOYMENT_RUNBOOK.md) — first deploy, post-deploy checks, alert troubleshooting and rollback.
 
 ---
 
