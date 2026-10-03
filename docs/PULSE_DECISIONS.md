@@ -2,7 +2,7 @@
 
 Why the product is shaped the way it is. Append-only: add new decisions at the bottom with a date; don't edit old ones, supersede them.
 
-This exists so decisions aren't silently re-litigated — or silently undone during a build. The **requirements** these produced live in `PULSE_SPEC.md`; this document holds the reasoning and what was rejected.
+This exists so decisions aren't silently re-litigated — or silently undone during a build. The **requirements** these produced live in `PULSE_BUILD_SPEC.md`; this document holds the reasoning and what was rejected.
 
 ---
 
@@ -135,16 +135,7 @@ Decisions made on your behalf that are cheap to reverse. Reverse them by saying 
 
 1. **Display bands are systolic-only** (D4) — the alternative is diastolic colouring the UI while never alerting.
 2. **Local fixtures come from the historical vault readings** (D6) — the alternative is synthetic data.
-3. **Regulatory approach is a stated position, not a compliance programme** (`PULSE_SPEC.md` §7) — the household-activity exemption under UK GDPR and the NZ Privacy Act is argued as an assumption to check. The alternative is full DPIA, privacy notice, DSAR process and retention policy, which is a materially bigger piece of work.
+3. **Regulatory approach is a stated position, not a compliance programme** (`PULSE_BUILD_SPEC.md` §7) — the household-activity exemption under UK GDPR and the NZ Privacy Act is argued as an assumption to check. The alternative is full DPIA, privacy notice, DSAR process and retention policy, which is a materially bigger piece of work.
 
 ---
 
-## Superseded documents
-
-The Obsidian vault holds earlier planning docs that contradict this product. They are superseded; do not build from them.
-
-| Document | Why superseded |
-|---|---|
-| `docs/PRD.md` | Older vault PRD — mobile app, medication in MVP, different metrics |
-| `Web-BP-Tracker-Brief-19-04-2026.md` | No backend, localStorage only, caregiver sharing out of scope |
-| `docs/Pulse-Design-System.md` | Revised 2026-09-20 to match this product. Its visual foundations remain the reference; its earlier scope, ≥160 threshold and localStorage prototype were wrong |
